@@ -21,21 +21,20 @@ const initialState = {
 export const registerUser = createAsyncThunk(
   "user/registerUser",
   async (user, thunkAPI) => {
-    registerUserThunk("/auth/register", user, thunkAPI);
+    return registerUserThunk("/auth/register", user, thunkAPI);
   }
 );
 
 export const loginUser = createAsyncThunk(
   "user/loginUser",
   async (user, thunkAPI) => {
-    loginUserThunk("/auth/login", user, thunkAPI);
+    return loginUserThunk("/auth/login", user, thunkAPI);
   }
 );
-
 export const updateUser = createAsyncThunk(
   "user/updateUser",
   async (user, thunkAPI) => {
-    updateUserThunk("/auth/updateUser", user, thunkAPI);
+    return updateUserThunk("/auth/updateUser", user, thunkAPI);
   }
 );
 
